@@ -112,3 +112,33 @@ footer {
   color: #777;
   font-size: 14px;
 }
+
+/* Hover et transitions pour les cartes produits */
+.product-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+}
+
+/* Hover sur les boutons couleur */
+.color {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-preview span {
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+/* Quand le texte change, petit effet smooth */
+.product-preview span.changed {
+  transform: scale(1.1);
+}
