@@ -163,9 +163,10 @@ footer {
   width: 100%;  
 }
 
+/* Bloc produit avec taille fixe */
 .product-preview {
   position: relative;
-  width: 240px;      /* largeur fixe pour tous */
+  width: 240px;      /* largeur fixe pour tous les produits */
   height: 250px;     /* hauteur fixe pour tous */
   border-radius: 24px;
   overflow: hidden;
@@ -174,14 +175,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 
+/* Image mockup */
 .product-preview img.mockup {
-  width: 90%;   /* limite la largeur à celle du bloc */
-  height: auto;  /* limite la hauteur à celle du bloc */
-  object-fit: contain; /* garde les proportions */
+  max-width: 100%;   /* ne dépasse jamais la largeur du bloc */
+  max-height: 100%;  /* ne dépasse jamais la hauteur du bloc */
+  width: auto;       /* garde les proportions */
+  height: auto;      /* garde les proportions */
+  object-fit: contain; /* s’adapte au bloc sans déformer */
 }
 
+/* Texte centré sur le produit */
 .product-preview span {
   position: absolute;
   top: 50%;
@@ -192,5 +198,5 @@ footer {
   font-weight: bold;
   text-align: center;
   z-index: 2;
+  white-space: nowrap; /* empêche le texte de passer à la ligne */
 }
-
