@@ -160,28 +160,39 @@ footer {
 }
 
 .navbar li:hover::after {
-  width: 100%;
-  
+  width: 100%;  
 }
+
 .product-preview {
   position: relative;
-  width: 280px;
-  height: 320px;
+  width: 280px;      /* largeur fixe pour tous les produits */
+  height: 320px;     /* hauteur fixe pour tous les produits */
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent; /* plus de couleur de fond */
 }
 
 .product-preview img.mockup {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 100%;       /* force l'image à remplir le bloc */
+  height: 100%;      /* idem pour la hauteur */
+  object-fit: contain; /* préserve les proportions */
   top: 0;
   left: 0;
+}
+
+.product-preview span {
+  position: relative;      /* au-dessus de l'image */
+  color: white;            /* ou autre selon la couleur du mockup */
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+  z-index: 2;              /* assure que le texte est devant */
 }
 
 .product-preview span {
