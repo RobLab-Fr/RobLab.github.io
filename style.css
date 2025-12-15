@@ -178,7 +178,7 @@ footer {
 
 .product-preview img.mockup {
   max-width: 100%;   /* limite la largeur à celle du bloc */
-  max-height: 100%;  /* limite la hauteur à celle du bloc */
+  max-height: auto;  /* limite la hauteur à celle du bloc */
   object-fit: contain; /* garde les proportions */
 }
 
